@@ -1,28 +1,18 @@
-BOT TELEGRAM KIỂM TRA OTP - CHẾ ĐỘ MÔ PHỎNG
+CAI DAT VA CHAY BOT
 
-1. Cài Python 3.10 trở lên.
-2. Mở PowerShell tại thư mục chứa bot.py.
-3. Cài thư viện:
-   py -m pip install -r requirements.txt
+1. Cai Python 3.12+.
+2. Mo PowerShell tai thu muc nay.
+3. Chay: py -m venv .venv
+4. Chay: .\.venv\Scripts\Activate.ps1
+5. Chay: pip install -r requirements.txt
+6. Dat token:
+   $env:TELEGRAM_BOT_TOKEN="TOKEN_MOI_CUA_BAN"
+7. Chay: python bot.py
 
-4. Tạo bot Telegram:
-   - Mở Telegram, tìm @BotFather.
-   - Gửi /newbot và làm theo hướng dẫn.
-   - Sao chép token BotFather cấp.
+RAILWAY
+1. Upload/push cac file nay len repository.
+2. Them Variable TELEGRAM_BOT_TOKEN trong Railway.
+3. Start command: python bot.py (hoac dung Procfile worker).
+4. Chi chay mot instance polling.
 
-5. Đặt token trong PowerShell (thay TOKEN_CUA_BAN bằng token thật):
-   $env:TELEGRAM_BOT_TOKEN="TOKEN_CUA_BAN"
-
-6. Chạy:
-   py bot.py
-
-7. Mở bot Telegram và gửi:
-   /start
-   /check
-   /test 0987654321
-
-LƯU Ý:
-- Bot chỉ kiểm tra định dạng số và mô phỏng.
-- Không gửi SMS/OTP thật, không gọi các API từ spamsms1_1.py.
-- Không chia sẻ token BotFather cho người khác.
-- Dừng bot bằng Ctrl+C.
+Bao mat: Token cu da tung duoc gui trong chat. Hay revoke token cu qua @BotFather va chi dung token moi trong bien moi truong.
