@@ -14,12 +14,12 @@ from telegram.ext import (
 TOKEN = os.getenv("9101710106:AAG4eVANxzSmb5afq5CDNE2OMjS1oNflVeo")
 
 logging.basicConfig(
-    filename="bot.log",
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s",
     encoding="utf-8",
 )
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.StreamHandler())
 
 
 def normalize_phone(raw: str) -> str | None:
